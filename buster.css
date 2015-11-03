@@ -1,0 +1,454 @@
+/*
+*
+* Css reset
+*
+*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+code,
+del,
+dfn,
+em,
+img,
+q,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+  list-style: none;
+}
+
+img {
+  width: 100%
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+
+a img {
+  border: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+}
+
+-webkit-::-moz-selection,
+-moz-::-moz-selection,
+-ms-::-moz-selection,
+::-moz-selection {
+  display: none;
+}
+
+-webkit-::selection,
+-moz-::selection,
+-ms-::selection,
+::selection {
+  display: none;
+}
+
+.anim03_1 {
+  -webkit-transition: all .3s 0;
+  transition: all .3s 0;
+}
+
+.anim03_2 {
+  -webkit-transition: all .3s .15s;
+  transition: all .3s .15s;
+}
+
+.anim03_3 {
+  -webkit-transition: all .3s .3s;
+  transition: all .3s .3s;
+}
+
+.anim04c {
+  -webkit-transition: all .4s cubic-bezier(.5, .35, .15, 1.4) !important;
+  transition: all .4s cubic-bezier(.5, .35, .15, 1.4) !important;
+}
+/*
+*
+* Css reset end.
+* Reedited for the theme specifics -bg image, body box-sizing etc.
+*
+*/
+
+html,
+body {
+  height: 100%!important;
+  top: 0!important;
+  font-family: "Open Sans", sans-serif;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: auto;
+  color: #eee;
+}
+/*---------*/
+
+.field {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  color: #888;
+}
+
+.field > .inner {
+  width: 95%;
+  min-width: 240px;
+  max-width: 540px;
+  height: 100%;
+  min-height: 560px;
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.button {
+  display: inline-block;
+  padding: 15px 20px;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: 4px solid transparent;
+  cursor: pointer;
+}
+
+.button:hover {
+  border-color: #888;
+  background: transparent !important;
+  color: #888;
+}
+
+.start_ON .field.start,
+.main_ON .field.main,
+.end_ON .field.end {
+  visibility: visible;
+  opacity: 1;
+  z-index: 1;
+  display: block;
+}
+
+.start_ON .field.main,
+.start_ON .field.end,
+.main_ON .field.start,
+.main_ON .field.end,
+.end_ON .field.start,
+.end_ON .field.main {
+  visibility: hidden;
+  opacity: 0;
+  z-index: 0;
+  display: none;
+}
+
+.main_ON #option {
+  display: none;
+}
+
+.option {
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+  position: absolute;
+  top: 40px;
+  z-index: 2;
+  text-align: center;
+  color: #888;
+}
+
+.option> * {
+  cursor: pointer;
+}
+
+.withButton_ON .withMouse,
+.withMouse_ON .withButton {
+  display: none;
+}
+
+.withButton_ON .withButton,
+.withMouse_ON .withMouse {
+  display: block;
+}
+
+.withMouse p {
+  text-transform: none;
+}
+
+.withMouse p span {
+  font-weight: 900;
+  text-transform: uppercase
+}
+
+.withMouse p:first-child span {
+  color: #2ecc71;
+}
+
+.withMouse p:last-child span {
+  color: #ec6d67;
+}
+
+#time {
+  width: 0;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  background: #2ecc71;
+}
+
+#time.medium {
+  background: #f1c40f;
+}
+
+#time.high {
+  background: #ec6d67;
+}
+
+.start .header {
+  padding: 175px 0 125px 0;
+}
+
+.start .header h1 {
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.start .header p {
+  padding: 30px;
+  font-size: 20px;
+}
+
+.start .button.start {
+  border-color: #2cbeff;
+  background: #2cbeff;
+  color: #fff;
+}
+
+.start .button.start:hover {
+  border-color: #2cbeff;
+  color: #2cbeff;
+}
+
+.main .notification {
+  width: 100%;
+  height: 30px;
+  padding-top: 100px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.main .level {
+  margin-right: 10px;
+}
+
+.main .counter {
+  margin-left: 10px;
+}
+
+.main .screen {
+  padding: 80px 0;
+  font-size: 50px;
+  font-weight: 900;
+}
+
+.main .first,
+.main .second {
+  margin: 0 10px;
+}
+
+.main .result {
+  font-size: 70px;
+  padding-top: 40px;
+}
+
+.main .button {
+  width: 100px;
+  padding: 20px;
+}
+
+.main .button.true {
+  border-color: #2ecc71;
+  color: #2ecc71;
+}
+
+.main .button.true:hover {
+  background: #2ecc71 !important;
+  color: #fff;
+}
+
+.main .button.false {
+  border-color: #ec6d67;
+  color: #ec6d67;
+}
+
+.main .button.false:hover {
+  background: #ec6d67 !important;
+  color: #fff;
+}
+
+.field.end {
+  text-align: center;
+}
+
+.end .scoreboard {
+  padding: 60px 0 50px 0;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+.end .header {
+  padding: 20px 0;
+  font-size: 50px;
+  color: #2cbeff;
+}
+
+.end .level {
+  padding: 20px 0;
+}
+
+.end .counter {
+  padding: 20px 0;
+  font-size: 60px;
+}
+
+.end .text {
+  padding: 20px 0;
+}
+
+.end .button.replay {
+  margin: 0 auto;
+  text-align: center;
+  border-color: #f1c40f;
+  background: #f1c40f;
+  color: #fff;
+}
+
+.end .button.replay:hover {
+  border-color: #f1c40f;
+  color: #f1c40f;
+}
+
+.level1 .text,
+.level2 .text,
+.level3 .text,
+.level4 .text {
+  display: none;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.level1 .level1,
+.level2 .level2,
+.level3 .level3,
+.level4 .level4 {
+  display: block;
+}
+
+.level1 .level1,
+.level1 .counter,
+.level1 .level {
+  color: #ec6d67;
+}
+
+.level2 .level2,
+.level2 .counter,
+.level2 .level {
+  color: #f1c40f;
+}
+
+.level3 .level3,
+.level3 .counter,
+.level3 .level {
+  color: #2cbeff;
+}
+
+.level4 .level4,
+.level4 .counter,
+.level4 .level {
+  color: #2ecc71;
+}
