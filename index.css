@@ -7,8 +7,8 @@ body {
   height: 100vh;
   line-height: 1.3;
   background: #2980b9 url('charminar.jpg') repeat 0 0;
-  width: 10px;
-  height: 10px;
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-position: 50% 50%;
   -webkit-animation: 10s linear 0s normal none infinite animate;
