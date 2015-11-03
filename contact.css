@@ -1,0 +1,124 @@
+.no-txt {
+  text-indent: -99999px;
+  display: block;
+}
+.container {
+  max-width: 340px;
+  margin: 2em auto;
+  padding: 0;
+  list-style: none;
+}
+.container .list-item {
+  margin: 0;
+  position: relative;
+}
+.avatar {
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.avatar img {
+  width: auto;
+  height: 100%;
+}
+.contact {
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  -webkit-transition: background 0.2s ease-out;
+          transition: background 0.2s ease-out;
+}
+.contact.ui-draggable-dragging {
+  padding: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+  background: rgba(255, 255, 255, 0.3);
+  -webkit-transition: background 0.25s ease-in;
+          transition: background 0.25s ease-in;
+}
+.contact-wrap {
+  border: 1px solid #2c2f37;
+  background-color: #434753;
+  font-size: 90%;
+  height: 32px;
+  padding: 1px;
+  cursor: pointer;
+  position: relative;
+}
+.contact-wrap p {
+  margin: 2px 0 0 0;
+  color: #ffffff;
+  font-size: 14px;
+}
+.contact-wrap p.sub-info {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 10px;
+}
+.contact-wrap .details {
+  margin-left: 32px;
+  padding: 0 0.8em;
+}
+.contact-wrap .dynamic-area {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding-left: 15px;
+  background-image: -webkit-linear-gradient(left, rgba(67, 71, 83, 0), #434753 15px);
+  background-image: linear-gradient(to right, rgba(67, 71, 83, 0), #434753 15px);
+}
+.contact-wrap .message-count {
+  margin-right: 4px;
+  margin-top: -4px;
+  text-align: center;
+  display: inline-block;
+  background: #df3a5e;
+  font-size: 12px;
+  font-weight: 700;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  border-radius: 50%;
+  color: #ffffff;
+}
+.contact-wrap .action-controls {
+  height: 32px;
+  width: 32px;
+  background: #32bd9e;
+  border: none;
+}
+body {
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+.desktop {
+  overflow: hidden;
+  position: fixed;
+  background: #434753;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.desktop > img {
+  text-align: center;
+  height: 106%;
+  width: auto;
+  position: absolute;
+  top: -18px;
+  bottom: -18px;
+  left: -18px;
+  -webkit-transition: 0.4s ease-out;
+          transition: 0.4s ease-out;
+}
+.desktop.close-off img {
+  -webkit-filter: blur(18px);
+          filter: blur(18px);
+  -webkit-transition: 0.25s ease-in;
+          transition: 0.25s ease-in;
+}
